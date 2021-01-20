@@ -1,0 +1,4 @@
+name: Custom Python Queries
+version: 0.0.0
+libraryPathDependencies:
+- codeql-python
