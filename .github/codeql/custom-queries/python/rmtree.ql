@@ -1,6 +1,6 @@
 /**
 * @id python/call-to-shutil-rmtree
-* @name Identify use of rmtree from shutil
+* @name Use of shutil.rmtree
 * @description We have specific ways to delete files - this query
 *              notifies when there are calls to `shutil.rmtree` so
 *              that we can revue how deletion is done.
