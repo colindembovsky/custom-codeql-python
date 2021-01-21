@@ -16,4 +16,4 @@ import python
 from ControlFlowNode call, Value eval
 where eval = Value::named("shutil.rmtree") and
       call = eval.getACall()
-select call, call.getEnclosingModule(), "call to 'rmtree'."
+select call, "Call to 'shutil.rmtree' detected."
