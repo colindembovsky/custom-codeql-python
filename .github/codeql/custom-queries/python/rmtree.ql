@@ -7,8 +7,11 @@ import python
 * 
 */
 
-from AstNode call, PythonFunctionValue method
-where
-  method.getQualifiedName() = "shutil.rmtree" and
-  method.getACall().getNode() = call
-select call, "Potential incorrect use of rmtree"
+// from PythonFunctionValue rmtree, CallNode call
+// where rmtree.getName() = "rmtree" and rmtree.getACall() = call
+// select rmtree.getName(), rmtree.getClass()
+
+from ControlFlowNode call, Value eval
+where eval = Value::named("shutil.rmtree") and
+      call = eval.getACall()
+select call, call.getEnclosingModule(), "call to 'rmtree'."
