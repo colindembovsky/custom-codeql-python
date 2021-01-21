@@ -1,4 +1,4 @@
-/*
+/**
 * @id python/call-to-shutil-rmtree
 * @name Identify use of rmtree from shutil
 * @description We have specific ways to delete files - this query
