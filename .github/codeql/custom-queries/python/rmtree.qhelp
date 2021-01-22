@@ -1,0 +1,29 @@
+<!DOCTYPE qhelp PUBLIC
+"-//Semmle//qhelp//EN"
+"qhelp.dtd">
+<qhelp>
+<overview>
+<p>
+<b>THIS IS AN EXAMPLE HELP FILE!</b>
+</p>
+<p>
+We have specific requirements around deleting files. When using <code>shutil.rmtree</code> we must also
+overwrite the existing file location to prevent undelete operations.
+</p>
+</overview>
+<recommendation>
+<p>
+Add code that overwrites the disk allocation tables.
+</p>
+</recommendation>
+<example>
+<p>
+The following snippet shows how to handle deletion safely:
+</p>
+<sample src="examples/rmtree.py"/>
+<p>
+</example>
+<references>
+<li>Best Practice: <a href="https://www.geeksforgeeks.org/delete-an-entire-directory-tree-using-python-shutil-rmtree-method/">Delete with rmtree</a>.</li>
+</references>
+</qhelp>
