@@ -6,6 +6,7 @@ def rmtree(path):
 
 try:
     shutil.rmtree("path") # <-- this is what we're trying to find
+    shutil.rmtree("otherpath") # <-- another one
 
     deleter = shutil
     deleter.rmtree("path")  # <-- this should also match
