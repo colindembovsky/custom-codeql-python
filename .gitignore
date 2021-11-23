@@ -1,3 +1,4 @@
 codeqldb/
 .github/codeql/custom-queries/python/.cache/
 *.code-workspace
+.venv
