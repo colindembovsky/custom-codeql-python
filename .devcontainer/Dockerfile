@@ -10,8 +10,8 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 
 RUN curl -OL https://github.com/github/codeql-cli-binaries/releases/download/v2.7.2/codeql-linux64.zip && \
     unzip codeql-linux64.zip && \
-    mv codeql /opt && \
-    export PATH=/opt/codeql:$PATH
+    mv codeql /opt
+ENV PATH="/opt/codeql:${PATH}"
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 # COPY requirements.txt /tmp/pip-tmp/
