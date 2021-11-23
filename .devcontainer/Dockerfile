@@ -8,7 +8,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 ARG NODE_VERSION="none"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
-RUN curl -O https://github.com/github/codeql-cli-binaries/releases/download/v2.7.2/codeql-linux64.zip && \
+RUN curl -OL https://github.com/github/codeql-cli-binaries/releases/download/v2.7.2/codeql-linux64.zip && \
     unzip codeql-linux64.zip && \
     mv codeql /opt && \
     export PATH=/opt/codeql:$PATH
