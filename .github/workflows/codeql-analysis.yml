@@ -33,7 +33,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         config-file: ./.github/codeql/codeql-config.yml
-        tools: https://github.com/github/codeql-cli-binaries/releases/download/v2.7.2/codeql-linux64.zip
+        tools: latest
 
     # - name: Autobuild
     #   uses: github/codeql-action/autobuild@v1
